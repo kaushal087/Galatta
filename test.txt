@@ -12,25 +12,21 @@
   <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
   <script src='js/slide-menu.js'></script>
   
-      <style media="screen" type="text/css">
-         .col-xs-6
-         {
-         margin-top:10px;
-         width:44%;
-         margin-left:3%;
-         margin-right:3%;
-         padding:1%;
-         text-align:center;
-         padding-bottom:100%;
-         margin-bottom:-100%;
-         }
-         .row
-         {
-         overflow:hidden;
-         }
-      </style>
-	  
-	  
+  <style media="screen" type="text/css">
+
+	.col-xs-6
+	{
+		margin-top:10px;
+		width:44%;
+		margin-left:3%;
+		margin-right:3%;
+		padding:1%;
+		text-align:center;
+	}
+
+
+		
+</style>
   
   </head>
   <body>
@@ -75,33 +71,36 @@
   </div>
   <div id="page-content">
    <div class="container">
-    
-	<div class="row">
+    <div class="row">
         <div class="col-xs-6 well">
-            ONE <br/>
-			ONE <br/>
-			ONE 
-        </div>
-        <div class="col-xs-6 well pull-right">
-            TWO<br/>
-			TWO<br/>
+            ONE ONE ONE
+			ONE ONE ONE
+			ONE ONE ONE
+			
+			
 			
         </div>
+        <div class="col-xs-6 well pull-right">
+            TWO TWO TWO
+			TWO TWO TWO 
+			TWO TWO TWO
+        </div>
     </div>
-	
 	</div>
    <div class="container">
-            <div class="row">
-               <div class="col-md-6 col-md-offset-3">
-                  <h3 class="text-center">Event - Galatta</h3>
-                  <hr>
-                  <div class="alert alert-danger">
-                     <span class="glyphicon glyphicon-heart"></span>
-                     <h4 class="text-center">Chess final is about to start</h4>
-                  </div>
-               </div>
-            </div>
-         </div>
+    <div class="row">
+        <div class="col-xs-6 well">
+            THREE THREE THREE
+			THREE THREE
+			THREE
+        </div>
+        <div class="col-xs-6 well pull-right">
+            FOUR FOUR FOUR
+			FOUR FOUR 
+			FOUR FOUR
+        </div>
+    </div>
+	</div>
    
   </div>
   </body>

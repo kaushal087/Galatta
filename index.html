@@ -43,11 +43,17 @@
             console.log(val);
             console.log("#" + val + "-dynamic-data");
 
-            var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"carrom", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"cricket", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
+            var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
+
+	    
+
 
             var obj = jQuery.parseJSON(jsonData);
+
+            count = 0;
 		
-		count = 0;
+	    dataToDisplay='';	
+		
             $.each(obj, function(key, value) {
                 console.log(value.gameName);
 
@@ -58,19 +64,24 @@
                     player2 = value.plr2;
                     timeOfEvent = value.timeOfEvent;
                     roundName = value.roundName;
-                count++;
-                
-                $("#" + val + "-dynamic-data").html('<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-8"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-4  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>');
-                
-                
+                    count++;
+                    console.log(count);
+                    
+                    
+                    dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
+
+
                 }
-                if(count == 0)
+                if (count == 0) {
+                    $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No ongoing activity!</span>');
+                }
+                else
                 {
-                	$("#" + val + "-dynamic-data").html('No data found');
+                	 $("#" + val + "-dynamic-data").html(dataToDisplay);
                 }
 
 
-                
+
 
             });
 
@@ -138,14 +149,6 @@
                 <a class="navbar-brand" href="http://galatta.tcs.com">Galatta .. yeeee</a>
             </div>
             <div id="slidemenu">
-                <!--
-                  <form class="navbar-form navbar-right" role="form">
-                    <div class="form-group">
-                      <input type="search" placeholder="search" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Search</button>
-                  </form>
-                  -->
                 <ul class="nav navbar-nav">
                     <li>
                         <hr>
@@ -166,14 +169,6 @@
                         <hr>
                         </hr>
                     </li>
-                    <!--       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                     <ul class="dropdown-menu">
-                      <li><a href="#" >Action</a></li>
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Action</a></li>
-                     </ul>
-                     </li>
-                     -->
                 </ul>
             </div>
         </div>
@@ -182,39 +177,16 @@
         <div id="home-container">
             <div class="container">
 
-
                 <div class="row">
                     <a href="#" class="col-xs-6 well home-links" id="houses" onclick="load_linkdata(this); return false;">HOUSES</a>
 
                     <a href="#" class="col-xs-6 well home-links pull-right" id="score" onclick="load_linkdata(this); return false;">SCORE</a>
-
-                    <!--  
-				  <div class="col-xs-6 well" id="houses">
-                     HOUSES 
-                  </div>
-                  <div class="col-xs-6 well pull-right" id="score">
-                     SCORE
-                  </div>
-				  -->
-
                 </div>
 
                 <div class="row">
-
                     <a href="#" class="col-xs-6 well home-links" id="discussion" onclick="load_linkdata(this); return false;">DISCUSSION</a>
-
                     <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
-
-                    <!--
-				<div class="col-xs-6 well" id="discussion">
-					DISCUSSION
-                  </div>
-                  <div class="col-xs-6 well pull-right" id="coordinators">
-                    COORDINATORS 
-                  </div>
-			-->
                 </div>
-
 
                 <div class="events">
                     <h3>EVENTS</h3>
@@ -258,54 +230,42 @@
             <div id="badminton-container">
                 <h3>Badminton</h3>
                 <hr>
-
                 <div id="badminton-dynamic-data">
-
-
                 </div>
-
-<!--
-                <div class="panel panel-default">
-                    <div class="panel-heading row">
-                        <span class="col-xs-8"><span id="team1"></span> vs <span id="team2"></span></span><span class="col-xs-4  pull-right"><span id="matchRound"></span> Round</span>
-                    </div>
-                    <div class="panel-body">
-                        <span id="player1"></span> vs <span id="player2"></span>
-                        <hr>
-                        <span id="timeOfmatch"></span>
-                    </div>
-                </div>
--->
-
-
-
-
-                <!--  <p class="text-info">Information</p> -->
             </div>
             <div id="chess-container">
                 <h3>Chess</h3>
                 <hr>
-                <p class="text-info">Information</p>
+                <div id="chess-dynamic-data">
+                </div>
             </div>
+
             <div id="carrom-container">
                 <h3>Carrom</h3>
                 <hr>
-                <p class="text-info">Information</p>
+                <div id="carrom-dynamic-data">
+                </div>
             </div>
+
             <div id="cricket-container">
                 <h3>Cricket</h3>
                 <hr>
-                <p class="text-info">Information</p>
+                <div id="cricket-dynamic-data">
+                </div>
             </div>
+
             <div id="quiz-container">
                 <h3>Quiz</h3>
                 <hr>
-                <p class="text-info">Information</p>
+                <div id="quiz-dynamic-data">
+                </div>
             </div>
+
             <div id="dumb-container">
                 <h3>Dumb Charades</h3>
                 <hr>
-                <p class="text-info">Information</p>
+                <div id="dumb-dynamic-data">
+                </div>
             </div>
             <div id="home-link">
                 <br>

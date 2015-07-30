@@ -43,11 +43,27 @@
             console.log(val);
             console.log("#" + val + "-dynamic-data");
 
-            var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
-
-	    
 
 
+
+         //   var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
+
+	   
+	   
+	   var jsonData;
+
+$.ajax({
+        url: 'https://api.myjson.com/bins/4h03a',
+        dataType: 'json',
+        success: function(response) {
+            jsonData = response;
+        }
+});
+	   
+	   
+	    console.log(jsonData);
+	   
+	   
             var obj = jQuery.parseJSON(jsonData);
 
             count = 0;

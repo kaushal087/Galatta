@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Galatta</title>
-      <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
-      <script src='js/slide-menu.js'></script>
-      <script>
-         $( document ).ready(function() {
-         // Handler for .ready() called.
-         	
-			$('#badminton-container').hide();
-         	$('#carrom-container').hide();
-         	$('#chess-container').hide();
-         	$('#cricket-container').hide();
-         	$('#dumb-container').hide();
-         	$('#quiz-container').hide();
-			$('#home-link').hide();
-			
-         });
-         
-         
-         function load_event(val)
-         {
-         	//console.log(val.value);
-         	$('#home-container').fadeOut("far-left");
-			
-         	$("#"+val.id+ "-container").fadeIn("slow-right");
-         	console.log("#"+val.id+ "container");
-			$('#home-link').fadeIn("slow");
-         	console.log("done");
-         }
-         
-      </script>
-      <style media="screen" type="text/css">
-         .col-xs-6
-         {
-         margin-top:10px;
-         width:44%;
-         margin-left:3%;
-         margin-right:3%;
-         padding:1%;
-         text-align:center;
-         padding-bottom:100%;
-         margin-bottom:-100%;
-		 
-         }
-         .row
-         {
-         overflow:hidden;
-         }
-      </style>
-   </head>
-   <body>
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
-         <div class="container">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Galatta</title>
+    
+	<!--  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">  -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	
+	<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 	-->
+	<!--    <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script> 	-->
+    <script src="js/jquery.min.js"></script>
+	<script src='js/bootstrap.min.js'></script>
+	<script src='js/slide-menu.js'></script>
+    
+	<script>
+        $(document).ready(function() {
+            // Handler for .ready() called.
+
+            $('#badminton-container').hide();
+            $('#carrom-container').hide();
+            $('#chess-container').hide();
+            $('#cricket-container').hide();
+            $('#dumb-container').hide();
+            $('#quiz-container').hide();
+            $('#home-link').hide();
+			$('#houses-container').hide();
+			$('#score-container').hide();
+			$('#discussion-container').hide();
+			$('#coordinators-container').hide();
+			$('#home-container').hide();
+			$('#home-container').fadeIn("slow");
+
+        });
+
+
+        function load_event(val) {
+            //console.log(val.value);
+            $('#home-container').fadeOut("slow");
+
+            $("#" + val.id + "-container").fadeIn("slow");
+            console.log("#" + val.id + "container");
+            $('#home-link').fadeIn("slow");
+            console.log("done");
+        }
+    </script>
+    <style media="screen" type="text/css">
+        .home-links {
+            margin-top: 10px;
+            width: 44%;
+            margin-left: 3%;
+            margin-right: 3%;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .home-links:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
+        <div class="container">
             <div class="navbar-header">
-               <a class="navbar-toggle"> 
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </a>
-               <a class="navbar-brand" href="http://galatta.tcs.com">Galatta .. yeeee</a>
+                <a class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="navbar-brand" href="http://galatta.tcs.com">Galatta .. yeeee</a>
             </div>
             <div id="slidemenu">
-               <!--
+                <!--
                   <form class="navbar-form navbar-right" role="form">
                     <div class="form-group">
                       <input type="search" placeholder="search" class="form-control">
@@ -78,27 +88,27 @@
                     <button type="submit" class="btn btn-primary">Search</button>
                   </form>
                   -->
-               <ul class="nav navbar-nav">
-                  <li>
-                     <hr>
-                     </hr>
-                  </li>
-                  <li><a href="main.html" >Home</a></li>
-                  <li>
-                     <hr>
-                     </hr>
-                  </li>
-                  <li><a href="index.html" >Hello World</a></li>
-                  <li>
-                     <hr>
-                     </hr>
-                  </li>
-                  <li><a href="#" >Hello Galatta Participants</a></li>
-                  <li>
-                     <hr>
-                     </hr>
-                  </li>
-                  <!--       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <hr>
+                        </hr>
+                    </li>
+                    <li><a href="main.html">Home</a></li>
+                    <li>
+                        <hr>
+                        </hr>
+                    </li>
+                    <li><a href="index.html">Hello World</a></li>
+                    <li>
+                        <hr>
+                        </hr>
+                    </li>
+                    <li><a href="#">Hello Galatta Participants</a></li>
+                    <li>
+                        <hr>
+                        </hr>
+                    </li>
+                    <!--       <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                      <ul class="dropdown-menu">
                       <li><a href="#" >Action</a></li>
                       <li><a href="#">Action</a></li>
@@ -106,84 +116,124 @@
                      </ul>
                      </li>
                      -->
-               </ul>
+                </ul>
             </div>
-         </div>
-      </div>
-      <div id="page-content">
-         <div id="home-container">
+        </div>
+    </div>
+    <div id="page-content">
+        <div id="home-container">
             <div class="container">
-               <div class="row">
-                  <div class="col-xs-6 well">
+
+
+                <div class="row">
+                    <a href="#" class="col-xs-6 well home-links" id="houses" onclick="load_event(this); return false;">HOUSES</a>
+
+                    <a href="#" class="col-xs-6 well home-links pull-right" id="score" onclick="load_event(this); return false;">SCORE</a>
+
+                    <!--  
+				  <div class="col-xs-6 well" id="houses">
                      HOUSES 
                   </div>
-                  <div class="col-xs-6 well pull-right">
+                  <div class="col-xs-6 well pull-right" id="score">
                      SCORE
                   </div>
-               </div>
-            </div>
-            <div class="container">
-               <div class="row">
-                  <div class="col-xs-6 well">
-                     
+				  -->
+
+                </div>
+
+                <div class="row">
+
+                    <a href="#" class="col-xs-6 well home-links" id="discussion" onclick="load_event(this); return false;">DISCUSSION</a>
+
+                    <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_event(this); return false;">COORDINATORS</a>
+
+                    <!--
+				<div class="col-xs-6 well" id="discussion">
 					DISCUSSION
-					 
                   </div>
-                  <div class="col-xs-6 well pull-right">
+                  <div class="col-xs-6 well pull-right" id="coordinators">
                     COORDINATORS 
                   </div>
-               </div>
-               <div class="events">
-                  <h3>EVENTS</h3>
-                  <div class="list-group">
-                     <a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
-                     <a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
-                     <a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
-                     <a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
-                     <a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
-                     <a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
-                  </div>
-               </div>
+			-->
+                </div>
+
+
+                <div class="events">
+                    <h3>EVENTS</h3>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
+                        <a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
+                        <a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
+                        <a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
+                        <a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
+                        <a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div id="event-container">
-            <div class="container">
-               <div id="badminton-container">
-                  <h3>Badminton</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-               <div id="chess-container">
-                  <h3>Chess</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-               <div id="carrom-container">
-                  <h3>Carrom</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-               <div id="cricket-container">
-                  <h3>Cricket</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-               <div id="quiz-container">
-                  <h3>Quiz</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-               <div id="dumb-container">
-                  <h3>Dumb Charades</h3>
-                  <hr>
-                  <p class="text-info">Information</p>
-               </div>
-			   <div id="home-link">
-			   <br>
-				<a href="index.html"><span class="glyphicon glyphicon-home" ></span></a>
-			   </div>
+        </div>
+    </div>
+	<div class="container">
+		<div id="houses-container">
+                <h3>HOUSES</h3>
+                <hr>
+                <p class="text-info">Information</p>
+        </div>
+	<div id="score-container">
+                <h3>SCORE</h3>
+                <hr>
+                <p class="text-info">Information</p>
+        </div>
+	<div id="discussion-container">
+                <h3>DISCUSSION</h3>
+                <hr>
+                <p class="text-info">Information</p>
+        </div>
+		<div id="coordinators-container">
+                <h3>COORDINATORS</h3>
+                <hr>
+                <p class="text-info">Information</p>
+        </div>
+	</div>
+	
+    <div id="event-container">
+        <div class="container">
+            <div id="badminton-container">
+                <h3>Badminton</h3>
+                <hr>
+                <p class="text-info">Information</p>
             </div>
-         </div>
-      </div>
-   </body>
+            <div id="chess-container">
+                <h3>Chess</h3>
+                <hr>
+                <p class="text-info">Information</p>
+            </div>
+            <div id="carrom-container">
+                <h3>Carrom</h3>
+                <hr>
+                <p class="text-info">Information</p>
+            </div>
+            <div id="cricket-container">
+                <h3>Cricket</h3>
+                <hr>
+                <p class="text-info">Information</p>
+            </div>
+            <div id="quiz-container">
+                <h3>Quiz</h3>
+                <hr>
+                <p class="text-info">Information</p>
+            </div>
+            <div id="dumb-container">
+                <h3>Dumb Charades</h3>
+                <hr>
+                <p class="text-info">Information</p>
+            </div>
+            <div id="home-link">
+                <br>
+                <a href="index.html"><span class="glyphicon glyphicon-home" ></span></a>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
 </html>

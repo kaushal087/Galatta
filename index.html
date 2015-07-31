@@ -48,17 +48,15 @@
 
             var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
 
-	   
-	   
-	   
-	   
-	   
+
+
+
             var obj = jQuery.parseJSON(jsonData);
 
             count = 0;
-		
-	    dataToDisplay='';	
-		
+
+            dataToDisplay = '';
+
             $.each(obj, function(key, value) {
                 console.log(value.gameName);
 
@@ -71,18 +69,16 @@
                     roundName = value.roundName;
                     count++;
                     console.log(count);
-                    
-                    
+
+
                     dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
 
 
                 }
                 if (count == 0) {
                     $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No ongoing activity!</span>');
-                }
-                else
-                {
-                	 $("#" + val + "-dynamic-data").html(dataToDisplay);
+                } else {
+                    $("#" + val + "-dynamic-data").html(dataToDisplay);
                 }
 
 
@@ -138,6 +134,14 @@
         #event-container .row {
             margin: 0px;
         }
+        
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 70%;
+            margin: auto;
+            height: 200px;
+        }
+
     </style>
 </head>
 
@@ -196,13 +200,25 @@
                 <div class="events">
                     <h3>EVENTS</h3>
                     <div class="list-group">
-                        <a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
-                        <a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
-                        <a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
-                        <a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
-                        <a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
-                        <a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
-                    </div>
+                        <div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
+                        </div>
+						<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
+                        </div>
+						<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
+						</div>
+						<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
+                        </div>
+						<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
+                        </div>
+						<div class="input-group">
+						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
@@ -211,12 +227,145 @@
         <div id="houses-container">
             <h3>HOUSES</h3>
             <hr>
-            <p class="text-info">Information</p>
+            <!--    <p class="text-info">Information</p> -->
+            <div class="container">
+                <br>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <img src="image_galata/galata_small.jpg" alt="galata" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/sarbani_small.jpg" alt="sarbani" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/vini.jpg" alt="vini" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/rowdies.jpg" alt="rowdies" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/sparklers.jpg" alt="sparklers" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/panthers.jpg" alt="panthers" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/phoenix.jpg" alt="phoenix" width="200" height="150">
+                        </div>
+
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <!--Contents will start from here -->
+
+
+
+            </div>
         </div>
         <div id="score-container">
             <h3>SCORE</h3>
             <hr>
-            <p class="text-info">Information</p>
+
+            <div class="main-wrap">
+                <div class="points-table">
+                    <table class="table table-bordered g-tab">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Royal Rowdies</th>
+                                <th>Black Panthers</th>
+                                <th>Rising Phoenix</th>
+                                <th>Purple Sparklers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Badminton</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Cricket</th>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Chess</th>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>8</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <th>Carrom</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Dumb Charades</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <th>Quiz</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="total">
+                                <th>Total</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!--            <p class="text-info">Information</p> -->
         </div>
         <div id="discussion-container">
             <h3>DISCUSSION</h3>

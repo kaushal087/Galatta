@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
     <title>Galatta</title>
-
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="css/style.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
     <script src="js/jquery.min.js"></script>
     <script src='js/bootstrap.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+
     <script src='js/slide-menu.js'></script>
 
     <script>
@@ -141,6 +144,15 @@
             margin: auto;
             height: 200px;
         }
+        
+       th, td
+       {
+       	text-align:center;
+       }
+        
+        th:nth-child(1) {  
+  		text-align:left;;
+	}
 
     </style>
 </head>
@@ -155,7 +167,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="navbar-brand" href="http://galatta.tcs.com">Galatta .. yeeee</a>
+                <a class="navbar-brand" href="http://galatta.tcs.com">GALAATA</a>
             </div>
             <div id="slidemenu">
                 <ul class="nav navbar-nav">
@@ -301,12 +313,13 @@
                 <div class="points-table">
                     <table class="table table-bordered g-tab">
                         <thead>
+                        
                             <tr>
-                                <th></th>
-                                <th>Royal Rowdies</th>
-                                <th>Black Panthers</th>
-                                <th>Rising Phoenix</th>
-                                <th>Purple Sparklers</th>
+                                <th><span class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon glyphicon-arrow-right"></span></th>
+                                <th>RR</th>
+                                <th>BP</th>
+                                <th>RP</th>
+                                <th>PS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -361,7 +374,16 @@
                             </tr>
                         </tbody>
                     </table>
+                    
+                    <ul class="list-group">
+		    <li class="list-group-item">RR: Royal Rowdies</li>
+		    <li class="list-group-item">BP: Black Panthers</li>
+		    <li class="list-group-item">RP: Rising Phoenix</li>
+		    <li class="list-group-item">PS: Purple Sparklers</li> 
+	   	   </ul>
+                    
                 </div>
+                
             </div>
 
 

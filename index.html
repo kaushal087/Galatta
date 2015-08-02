@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    
+
     <title>Galatta</title>
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="css/style.css" rel="stylesheet">
 
     <script src="js/jquery.min.js"></script>
@@ -41,58 +41,38 @@
 
         });
 
-
         function writeEventDetails(val) {
             console.log(val);
             console.log("#" + val + "-dynamic-data");
-
-
-
-
-            var jsonData = '[ { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:02:44 PM IST", "team1":"T1", "team2":"T2", "plr1":"P1", "plr2":"P2", "roundName":"3rd" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:31 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"4th" }, { "gameName":"chess", "timeOfEvent":"Thu 2015.07.30 at 06:03:54 PM IST", "team1":"T3", "team2":"T4", "plr1":"P1", "plr2":"P2", "roundName":"Final" } ]';
-
-
-
-
-            var obj = jQuery.parseJSON(jsonData);
-
-            count = 0;
-
-            dataToDisplay = '';
-
-            $.each(obj, function(key, value) {
-                console.log(value.gameName);
-
-                if (value.gameName == val) {
-                    team1 = value.team1;
-                    team2 = value.team2;
-                    player1 = value.plr1;
-                    player2 = value.plr2;
-                    timeOfEvent = value.timeOfEvent;
-                    roundName = value.roundName;
-                    count++;
-                    console.log(count);
-
-
-                    dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
-
-
-                }
-                if (count == 0) {
-                    $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No ongoing activity!</span>');
-                } else {
-                    $("#" + val + "-dynamic-data").html(dataToDisplay);
-                }
-
-
-
-
+            // fetching data from server start
+            $.getJSON("https://api.myjson.com/bins/221ou", function(data) {
+                placeData(data);
             });
 
-            console.log("inside writeEventDetails done");
-
-
-
+            function placeData(obj) {
+                count = 0;
+                dataToDisplay = '';
+                $.each(obj, function(key, value) {
+                    console.log(value.gameName);
+                    if (value.gameName == val) {
+                        team1 = value.team1;
+                        team2 = value.team2;
+                        player1 = value.plr1;
+                        player2 = value.plr2;
+                        timeOfEvent = value.timeOfEvent;
+                        roundName = value.roundName;
+                        count++;
+                        console.log(count);
+                        dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
+                    }
+                    if (count == 0) {
+                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No ongoing activity!</span>');
+                    } else {
+                        $("#" + val + "-dynamic-data").html(dataToDisplay);
+                    }
+                });
+            }
+            // fetching data from server end
         }
 
         function load_event(val) {
@@ -145,15 +125,15 @@
             height: 200px;
         }
         
-       th, td
-       {
-       	text-align:center;
-       }
+        th,
+        td {
+            text-align: center;
+        }
         
-        th:nth-child(1) {  
-  		text-align:left;;
-	}
-
+        th:nth-child(1) {
+            text-align: left;
+            ;
+        }
     </style>
 </head>
 
@@ -213,24 +193,24 @@
                     <h3>EVENTS</h3>
                     <div class="list-group">
                         <div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
                         </div>
-						<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
                         </div>
-						<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
-						</div>
-						<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
                         </div>
-						<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
                         </div>
-						<div class="input-group">
-						<span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
-						</div>
-					</div>
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -313,7 +293,7 @@
                 <div class="points-table">
                     <table class="table table-bordered g-tab">
                         <thead>
-                        
+
                             <tr>
                                 <th><span class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon glyphicon-arrow-right"></span></th>
                                 <th>RR</th>
@@ -374,16 +354,16 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <ul class="list-group">
-		    <li class="list-group-item">RR: Royal Rowdies</li>
-		    <li class="list-group-item">BP: Black Panthers</li>
-		    <li class="list-group-item">RP: Rising Phoenix</li>
-		    <li class="list-group-item">PS: Purple Sparklers</li> 
-	   	   </ul>
-                    
+                        <li class="list-group-item">RR: Royal Rowdies</li>
+                        <li class="list-group-item">BP: Black Panthers</li>
+                        <li class="list-group-item">RP: Rising Phoenix</li>
+                        <li class="list-group-item">PS: Purple Sparklers</li>
+                    </ul>
+
                 </div>
-                
+
             </div>
 
 

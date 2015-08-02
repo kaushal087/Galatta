@@ -134,6 +134,31 @@
             text-align: left;
             ;
         }
+        .navbar-default
+        {
+        	border-color: #E7E7E7 #E7E7E7 #FFA500;
+        }
+       
+       hr
+       {
+       	border: 0px none;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgba(255, 165, 0, 0.75), transparent);
+       }
+       .page-title
+       {
+       		text-align:center;
+       }
+       #slide-nav #navbar-height-col 
+       {
+ 		border-right: 1px solid #FFA500;
+       }
+       #slide-nav #slidemenu 
+       {
+		border-right: 1px solid #FFA500;
+       }
+       
+       
     </style>
 </head>
 
@@ -189,8 +214,10 @@
                     <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
                 </div>
 
+		<hr>
                 <div class="events">
-                    <h3>EVENTS</h3>
+                    <h4 class="text-center">EVENTS</h4>
+                    <hr>
                     <div class="list-group">
                         <div class="input-group">
                             <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
@@ -202,7 +229,7 @@
                             <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
                         </div>
                         <div class="input-group">
-                            <span class="input-group-addon glyphicon glyphicon-king"></span><a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
+                            <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon glyphicon glyphicon-home"></span><a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
@@ -217,7 +244,7 @@
     </div>
     <div class="container">
         <div id="houses-container">
-            <h3>HOUSES</h3>
+            <h4 class="text-center">HOUSES</h4>
             <hr>
             <!--    <p class="text-info">Information</p> -->
             <div class="container">
@@ -286,7 +313,7 @@
             </div>
         </div>
         <div id="score-container">
-            <h3>SCORE</h3>
+            <h4 class="text-center">SCORE</h4>
             <hr>
 
             <div class="main-wrap">
@@ -370,12 +397,12 @@
             <!--            <p class="text-info">Information</p> -->
         </div>
         <div id="discussion-container">
-            <h3>DISCUSSION</h3>
+            <h4 class="text-center">DISCUSSION</h4>
             <hr>
             <p class="text-info">Information</p>
         </div>
         <div id="coordinators-container">
-            <h3>COORDINATORS</h3>
+            <h4 class="text-center">COORDINATORS</h4>
             <hr>
             <p class="text-info">Information</p>
         </div>
@@ -384,41 +411,41 @@
     <div id="event-container">
         <div class="container">
             <div id="badminton-container">
-                <h3>Badminton</h3>
+                <h4 class="text-center">Badminton</h4>
                 <hr>
                 <div id="badminton-dynamic-data">
                 </div>
             </div>
             <div id="chess-container">
-                <h3>Chess</h3>
+                <h4 class="text-center">Chess</h4>
                 <hr>
                 <div id="chess-dynamic-data">
                 </div>
             </div>
 
             <div id="carrom-container">
-                <h3>Carrom</h3>
+                <h4 class="text-center">Carrom</h4>
                 <hr>
                 <div id="carrom-dynamic-data">
                 </div>
             </div>
 
             <div id="cricket-container">
-                <h3>Cricket</h3>
+                <h4 class="text-center">Cricket</h4>
                 <hr>
                 <div id="cricket-dynamic-data">
                 </div>
             </div>
 
             <div id="quiz-container">
-                <h3>Quiz</h3>
+                <h4 class="text-center">Quiz</h4>
                 <hr>
                 <div id="quiz-dynamic-data">
                 </div>
             </div>
 
             <div id="dumb-container">
-                <h3>Dumb Charades</h3>
+                <h4 class="text-center">Dumb Charades</h4>
                 <hr>
                 <div id="dumb-dynamic-data">
                 </div>

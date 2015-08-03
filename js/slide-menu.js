@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   // $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
+    $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
     var toggler = '.navbar-toggle';
     var pagewrapper = '#page-content';
     var navigationwrapper = '.navbar-header';

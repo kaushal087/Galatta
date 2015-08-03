@@ -134,35 +134,39 @@
             text-align: left;
             ;
         }
-        .navbar-default
-        {
-        	border-color: #E7E7E7 #E7E7E7 #FFA500;
+        
+        .navbar-default {
+            border-color: #E7E7E7 #E7E7E7 #FFA500;
         }
-       
-       hr
-       {
-       	border: 0px none;
-	height: 1px;
-	background-image: linear-gradient(to right, transparent, rgba(255, 165, 0, 0.75), transparent);
-       }
-       .page-title
-       {
-       		text-align:center;
-       }
-       #slide-nav #navbar-height-col 
-       {
- 		border-right: 1px solid #FFA500;
-       }
-       #slide-nav #slidemenu 
-       {
-		border-right: 1px solid #FFA500;
-       }
-       .event-icon
-	   {
-			width:24px;
-			height:24px;
-	   }
-       
+        
+        hr {
+            border: 0px none;
+            height: 1px;
+            background-image: linear-gradient(to right, transparent, rgba(255, 165, 0, 0.75), transparent);
+        }
+        
+        .page-title {
+            text-align: center;
+        }
+        
+        #slide-nav #navbar-height-col {
+            border-right: 1px solid #FFA500;
+        }
+        
+        #slide-nav #slidemenu {
+            border-right: 1px solid #FFA500;
+        }
+        
+        .event-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        #slide-nav #slidemenu {
+            padding-bottom: 110%;
+            margin-bottom: -110%;
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -218,33 +222,33 @@
                     <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
                 </div>
 
-		<hr>
+                <hr>
                 <div class="events">
                     <h4 class="text-center">EVENTS</h4>
                     <hr>
                     <div class="list-group">
                         <div class="input-group">
-							<span class="input-group-addon event-image"><image src="image_galata/event_icon/badminton.png" class="event-icon"/></span>
+                            <span class="input-group-addon event-image"><image src="image_galata/event_icon/badminton.png" class="event-icon"/></span>
                             </span><a href="#" class="list-group-item" id="badminton" onclick="load_event(this); return false;">Badminton</a>
                         </div>
                         <div class="input-group">
                             <span class="input-group-addon event-image"><image src="image_galata/event_icon/cricket.png" class="event-icon"/></span>
-							<a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
+                            <a href="#" class="list-group-item" id="cricket" onclick="load_event(this); return false;">Cricket</a>
                         </div>
                         <div class="input-group">
-							<span class="input-group-addon event-image"><image src="image_galata/event_icon/chess.png" class="event-icon"/></span>
+                            <span class="input-group-addon event-image"><image src="image_galata/event_icon/chess.png" class="event-icon"/></span>
                             <a href="#" class="list-group-item" id="chess" onclick="load_event(this); return false;">Chess</a>
                         </div>
                         <div class="input-group">
-							<span class="input-group-addon event-image"><image src="image_galata/event_icon/carrom.png" class="event-icon"/></span>
+                            <span class="input-group-addon event-image"><image src="image_galata/event_icon/carrom.png" class="event-icon"/></span>
                             <a href="#" class="list-group-item" id="carrom" onclick="load_event(this); return false;">Carom</a>
                         </div>
                         <div class="input-group">
-							<span class="input-group-addon event-image"><image src="image_galata/event_icon/dumb.png" class="event-icon"/></span>
+                            <span class="input-group-addon event-image"><image src="image_galata/event_icon/dumb.png" class="event-icon"/></span>
                             </span><a href="#" class="list-group-item" id="dumb" onclick="load_event(this); return false;"> Dumb Charades</a>
                         </div>
                         <div class="input-group">
-							<span class="input-group-addon event-image"><image src="image_galata/event_icon/quiz.png" class="event-icon"/></span>
+                            <span class="input-group-addon event-image"><image src="image_galata/event_icon/quiz.png" class="event-icon"/></span>
                             </span><a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
                         </div>
                     </div>

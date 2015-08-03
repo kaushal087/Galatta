@@ -24,7 +24,7 @@
     <script>
         $(document).ready(function() {
             // Handler for .ready() called.
-
+	    $('#ajax-loader').show();
             $('#badminton-container').hide();
             $('#carrom-container').hide();
             $('#chess-container').hide();
@@ -38,6 +38,7 @@
             $('#coordinators-container').hide();
             $('#home-container').hide();
             $('#home-container').fadeIn("slow");
+            $('#ajax-loader').hide();
 
         });
 
@@ -45,6 +46,9 @@
             console.log(val);
             console.log("#" + val + "-dynamic-data");
             // fetching data from server start
+            
+            
+            
             $.getJSON("https://api.myjson.com/bins/221ou", function(data) {
                 placeData(data);
             });
@@ -82,8 +86,10 @@
             $("#" + val.id + "-container").fadeIn("slow");
             console.log("#" + val.id + "-container");
             $('#home-link').fadeIn("slow");
-
+		
+	    $('#ajax-loader').show();
             writeEventDetails(val.id);
+            $('#ajax-loader').hide();
             console.log("done");
         }
 
@@ -153,8 +159,7 @@
             height: 24px;
         }
         
-        
-        
+                
         #slide-nav #slidemenu {
             border-right: 1px solid #FFA500;
         }
@@ -167,12 +172,16 @@
 			background-color:black;
         }
         
-     
-        
+             
         #slide-nav #slidemenu {
             background-color: black;
         }
         */
+        #ajax-loader
+        {
+        	text-align:center;
+        }
+        
     </style>
 </head>
 
@@ -470,6 +479,10 @@
                 <div id="dumb-dynamic-data">
                 </div>
             </div>
+            
+            <div id="ajax-loader"><image src="image_galata/ajax_loader.gif"  /></div>
+            
+            
             <div id="home-link">
                 <br>
                 <a href="index.html"><span class="glyphicon glyphicon-home" ></span></a>

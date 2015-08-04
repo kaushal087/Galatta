@@ -13,7 +13,7 @@
             $('#discussion-container').hide();
             $('#coordinators-container').hide();
             $('#home-container').hide();
-            $('#home-container').fadeIn("slow");
+            $('#home-container').fadeIn("fast");
             $('#ajax-loader').hide();
 
         });
@@ -96,11 +96,11 @@
 
         function load_event(val) {
             //console.log(val.value);
-            $('#home-container').fadeOut("slow");
+            $('#home-container').fadeOut("fast");
 
-            $("#" + val.id + "-container").fadeIn("slow");
+            $("#" + val.id + "-container").fadeIn("fast");
             console.log("#" + val.id + "-container");
-            $('#home-link').fadeIn("slow");
+            $('#home-link').fadeIn("fast");
 		
 	    $('#ajax-loader').show();
             writeEventDetails(val.id);
@@ -110,22 +110,22 @@
 
         function load_linkdata(val) {
             //console.log(val.value);
-            $('#home-container').fadeOut("slow");
+            $('#home-container').fadeOut("fast");
 
-            $("#" + val.id + "-container").fadeIn("slow");
+            $("#" + val.id + "-container").fadeIn("fast");
             console.log("#" + val.id + "-container");
-            $('#home-link').fadeIn("slow");
+            $('#home-link').fadeIn("fast");
 
             console.log("done");
         }
 		function load_discussion(val) {
             //console.log(val.value);
-            $('#home-container').fadeOut("slow");
+            $('#home-container').fadeOut("fast");
 
-            $("#" + val.id + "-container").fadeIn("slow");
+            $("#" + val.id + "-container").fadeIn("fast");
             console.log("#" + val.id + "-container");
 			
-            $('#home-link').fadeIn("slow");
+            $('#home-link').fadeIn("fast");
 			writeDiscussion(val.id);
             console.log("done");
         }

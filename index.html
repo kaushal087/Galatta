@@ -41,14 +41,49 @@
             $('#ajax-loader').hide();
 
         });
+		
+		    function writeDiscussion(val) {
+            console.log(val);
+            console.log("#" + val + "-dynamic-data");
+            // fetching data from server start
+            
+                    
+            $.getJSON("https://api.myjson.com/bins/40ncu", function(data) {
+                placeData(data);
+            });
+
+            function placeData(obj) {
+                count = 0;
+                dataToDisplay = '';
+                $.each(obj, function(key, value) {
+
+						comment = value.comment;
+						name  = value.name;
+						timeOfComment = value.timeOfComment;
+						
+                        count++;
+                        console.log(count);
+                        dataToDisplay += '<div class="panel panel-default"><div class="panel-body"><span class="comment">' + comment + '</span></div><div class="panel-heading row"><span class="col-xs-7">' + timeOfComment + '</span> <span class="col-xs-5  pull-right">' + name + '</span></div></div>';
+
+                    if (count == 0) {
+                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No feeds to show... Visit later!</span>');
+                    } else {
+                        $("#" + val + "-dynamic-data").html(dataToDisplay);
+                    }
+                });
+            }
+            // fetching data from server end
+        }
+		
+		
+		
 
         function writeEventDetails(val) {
             console.log(val);
             console.log("#" + val + "-dynamic-data");
             // fetching data from server start
             
-            
-            
+                    
             $.getJSON("https://api.myjson.com/bins/221ou", function(data) {
                 placeData(data);
             });
@@ -103,6 +138,19 @@
 
             console.log("done");
         }
+		function load_discussion(val) {
+            //console.log(val.value);
+            $('#home-container').fadeOut("slow");
+
+            $("#" + val.id + "-container").fadeIn("slow");
+            console.log("#" + val.id + "-container");
+			
+            $('#home-link').fadeIn("slow");
+			writeDiscussion(val.id);
+            console.log("done");
+        }
+		
+		
     </script>
     <style media="screen" type="text/css">
         .home-links {
@@ -123,6 +171,10 @@
         #event-container .row {
             margin: 0px;
         }
+		#discussion-dynamic-data .row
+		{
+			margin:0px;
+		}
         
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
@@ -233,7 +285,7 @@
                 </div>
 
                 <div class="row">
-                    <a href="#" class="col-xs-6 well home-links" id="discussion" onclick="load_linkdata(this); return false;">DISCUSSION</a>
+                    <a href="#" class="col-xs-6 well home-links" id="discussion" onclick="load_discussion(this); return false;">DISCUSSION</a>
                     <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
                 </div>
 
@@ -427,6 +479,9 @@
         </div>
         <div id="discussion-container">
             <h4 class="text-center">DISCUSSION</h4>
+			
+			<div id="discussion-dynamic-data">
+            </div>
             <hr>
             <p class="text-info">Information</p>
         </div>

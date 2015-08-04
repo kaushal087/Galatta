@@ -13,226 +13,15 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="css/custom.css" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <script src='js/bootstrap.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
 
     <script src='js/slide-menu.js'></script>
-
-    <script>
-        $(document).ready(function() {
-            // Handler for .ready() called.
-	    $('#ajax-loader').show();
-            $('#badminton-container').hide();
-            $('#carrom-container').hide();
-            $('#chess-container').hide();
-            $('#cricket-container').hide();
-            $('#dumb-container').hide();
-            $('#quiz-container').hide();
-            $('#home-link').hide();
-            $('#houses-container').hide();
-            $('#score-container').hide();
-            $('#discussion-container').hide();
-            $('#coordinators-container').hide();
-            $('#home-container').hide();
-            $('#home-container').fadeIn("slow");
-            $('#ajax-loader').hide();
-
-        });
-		
-		    function writeDiscussion(val) {
-            console.log(val);
-            console.log("#" + val + "-dynamic-data");
-            // fetching data from server start
-            
-                    
-            $.getJSON("https://api.myjson.com/bins/40ncu", function(data) {
-                placeData(data);
-            });
-
-            function placeData(obj) {
-                count = 0;
-                dataToDisplay = '';
-                $.each(obj, function(key, value) {
-
-						comment = value.comment;
-						name  = value.name;
-						timeOfComment = value.timeOfComment;
-						
-                        count++;
-                        console.log(count);
-                        dataToDisplay += '<div class="panel panel-default"><div class="panel-body"><span class="comment">' + comment + '</span></div><div class="panel-heading row"><span class="col-xs-7">' + timeOfComment + '</span> <span class="col-xs-5  pull-right">' + name + '</span></div></div>';
-
-                    if (count == 0) {
-                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No feeds to show... Visit later!</span>');
-                    } else {
-                        $("#" + val + "-dynamic-data").html(dataToDisplay);
-                    }
-                });
-            }
-            // fetching data from server end
-        }
-		
-		
-		
-
-        function writeEventDetails(val) {
-            console.log(val);
-            console.log("#" + val + "-dynamic-data");
-            // fetching data from server start
-            
-                    
-            $.getJSON("https://api.myjson.com/bins/221ou", function(data) {
-                placeData(data);
-            });
-
-            function placeData(obj) {
-                count = 0;
-                dataToDisplay = '';
-                $.each(obj, function(key, value) {
-                    console.log(value.gameName);
-                    if (value.gameName == val) {
-                        team1 = value.team1;
-                        team2 = value.team2;
-                        player1 = value.plr1;
-                        player2 = value.plr2;
-                        timeOfEvent = value.timeOfEvent;
-                        roundName = value.roundName;
-                        count++;
-                        console.log(count);
-                        dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
-                    }
-                    if (count == 0) {
-                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">No ongoing activity!</span>');
-                    } else {
-                        $("#" + val + "-dynamic-data").html(dataToDisplay);
-                    }
-                });
-            }
-            // fetching data from server end
-        }
-
-        function load_event(val) {
-            //console.log(val.value);
-            $('#home-container').fadeOut("slow");
-
-            $("#" + val.id + "-container").fadeIn("slow");
-            console.log("#" + val.id + "-container");
-            $('#home-link').fadeIn("slow");
-		
-	    $('#ajax-loader').show();
-            writeEventDetails(val.id);
-            $('#ajax-loader').hide();
-            console.log("done");
-        }
-
-        function load_linkdata(val) {
-            //console.log(val.value);
-            $('#home-container').fadeOut("slow");
-
-            $("#" + val.id + "-container").fadeIn("slow");
-            console.log("#" + val.id + "-container");
-            $('#home-link').fadeIn("slow");
-
-            console.log("done");
-        }
-		function load_discussion(val) {
-            //console.log(val.value);
-            $('#home-container').fadeOut("slow");
-
-            $("#" + val.id + "-container").fadeIn("slow");
-            console.log("#" + val.id + "-container");
-			
-            $('#home-link').fadeIn("slow");
-			writeDiscussion(val.id);
-            console.log("done");
-        }
-		
-		
-    </script>
+    <script src='js/custom.js'></script>
     <style media="screen" type="text/css">
-        .home-links {
-            margin-top: 10px;
-            width: 44%;
-            margin-left: 3%;
-            margin-right: 3%;
-            text-align: center;
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        .home-links:hover {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        #event-container .row {
-            margin: 0px;
-        }
-		#discussion-dynamic-data .row
-		{
-			margin:0px;
-		}
-        
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: 70%;
-            margin: auto;
-            height: 200px;
-        }
-        
-        th,
-        td {
-            text-align: center;
-        }
-        
-        th:nth-child(1) {
-            text-align: left;
-            ;
-        }
-        
-        .navbar-default {
-            border-color: #E7E7E7 #E7E7E7 #FFA500;
-        }
-        
-        hr {
-            border: 0px none;
-            height: 1px;
-            background-image: linear-gradient(to right, transparent, rgba(255, 165, 0, 0.75), transparent);
-        }
-        
-        .page-title {
-            text-align: center;
-        }
-           .event-icon {
-            width: 24px;
-            height: 24px;
-        }
-        
-                
-        #slide-nav #slidemenu {
-            border-right: 1px solid #FFA500;
-        }
-        /*
-        
-        
-        #slide-nav #navbar-height-col {
-            border-right: 1px solid #FFA500;
-			width:40%;
-			background-color:black;
-        }
-        
-             
-        #slide-nav #slidemenu {
-            background-color: black;
-        }
-        */
-        #ajax-loader
-        {
-        	text-align:center;
-        }
         
     </style>
 </head>
@@ -247,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="navbar-brand" href="http://galatta.tcs.com">GALAATA</a>
+                <image src="image_galata/logo.png" class="navbar-brand logo"/> <a class="navbar-brand" href="index.html">GALAATA</a>
             </div>
             <div id="slidemenu">
                 <ul class="nav navbar-nav">
@@ -260,12 +49,12 @@
                         <hr>
                         </hr>
                     </li>
-                    <li><a href="index.html">About US</a></li>
+                    <li><a href="about.html">About US</a></li>
                     <li>
                         <hr>
                         </hr>
                     </li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
                     <li>
                         <hr>
                         </hr>

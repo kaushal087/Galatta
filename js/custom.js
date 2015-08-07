@@ -85,7 +85,7 @@
                         dataToDisplay += '<div class="panel panel-default"><div class="panel-heading row"><span class="col-xs-7"><span class="team1">' + team1 + '</span> vs <span class="team2">' + team2 + '</span></span><span class="col-xs-5  pull-right"><span class="matchRound">' + roundName + '</span> Round</span></div><div class="panel-body"><span class="player1">' + player1 + '</span> vs <span class="player2">' + player2 + '</span><hr><span class="timeOfmatch">' + timeOfEvent + '</span></div></div>';
                     }
                     if (count == 0) {
-                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">This event has ended! Thanks you!</span>');
+                        $("#" + val + "-dynamic-data").html('<span class="alert alert-danger col-xs-12">This event has ended! Thank you!</span>');
                     } else {
                         $("#" + val + "-dynamic-data").html(dataToDisplay);
                     }

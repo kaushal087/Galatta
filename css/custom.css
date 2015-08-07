@@ -6,11 +6,16 @@
             text-align: center;
             text-decoration: none;
             color: inherit;
+            padding-top:40px;
+            padding-bottom: 40px;
+
+
         }
         
         .home-links:hover {
             text-decoration: none;
             color: inherit;
+
         }
         
         #event-container .row {
@@ -83,3 +88,22 @@
 		height 8px;
 		width: 100px;
 	}
+.txt-font{
+    font-weight: bold;
+    font-size: 16px;
+    color:#dddddd;
+}
+.txt-font:hover
+{
+    color:#ffffff;
+
+}
+
+    .o {background-color:#0066FF; }
+    .r { background-color:#D65930;}
+    .b { background-color:#297A29;}
+    .p { background-color:#333333;}
+    
+    pre{
+    font-family: inherit;
+    }

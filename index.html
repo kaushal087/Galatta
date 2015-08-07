@@ -36,7 +36,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <image src="image_galata/logo.png" class="navbar-brand logo" /> <a class="navbar-brand" href="index.html">GALAATA</a>
+                <!-- <image src="image_galata/logo.png" class="navbar-brand logo" /> -->
+                <a class="navbar-brand" href="index.html">GALAATA</a>
             </div>
             <div id="slidemenu">
                 <ul class="nav navbar-nav">
@@ -73,17 +74,18 @@
             <div class="container">
 
                 <div class="row">
-                    <a href="#" class="col-xs-6 well home-links" id="houses" onclick="load_linkdata(this); return false;">HOUSES</a>
+                    <a href="#" class="col-xs-6 well home-links txt-font o" id="houses" onclick="load_linkdata(this); return false;">HOUSES</a>
 
-                    <a href="#" class="col-xs-6 well home-links pull-right" id="score" onclick="load_linkdata(this); return false;">SCORE</a>
+                    <a href="#" class="col-xs-6 well home-links pull-right txt-font r" id="score" onclick="load_linkdata(this); return false;">SCORE</a>
                 </div>
 
                 <div class="row">
-                    <a href="#" class="col-xs-6 well home-links" id="discussion" onclick="load_discussion(this); return false;">DISCUSSION</a>
-                    <a href="#" class="col-xs-6 well home-links pull-right" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
+                    <a href="#" class="col-xs-6 well home-links txt-font b" id="discussion" onclick="load_discussion(this); return false;">GALLERY</a>
+                    <a href="#" class="col-xs-6 well home-links pull-right txt-font p" id="coordinators" onclick="load_linkdata(this); return false;">COORDINATORS</a>
                 </div>
 
                 <hr>
+
                 <div class="events">
                     <h4 class="text-center">EVENTS</h4>
                     <hr>
@@ -113,6 +115,7 @@
                             </span><a href="#" class="list-group-item" id="quiz" onclick="load_event(this); return false;">Quiz</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -123,91 +126,119 @@
             <hr>
 
 
-<div class="container">
-  <br/>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
-      <li data-target="#myCarousel" data-slide-to="4"></li>
-    </ol>
+            <div class="container">
+                <br/>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      
-      <div class="item active">
-        <img src="image_galata/abcd.jpg" alt="galata" width="200" height="150">
-      </div>
-        
-      <div class="item">
-        <img src="image_galata/rowdies.jpg" alt="rowdies" width="200" height="150">
-      </div>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
 
-      <div class="item">
-        <img src="image_galata/sparklers.jpg" alt="sparklers" width="200" height="150">
-      </div>
+                        <div class="item active">
+                            <img src="image_galata/abcd.jpg" alt="galaata" width="200" height="150">
+                        </div>
 
-      <div class="item">
-        <img src="image_galata/panthers.jpg" alt="panthers" width="200" height="150">
-      </div>
-      
-      <div class="item">
-        <img src="image_galata/phoenix.jpg" alt="phoenix" width="200" height="150">
-      </div>
-   
+                        <div class="item">
+                            <img src="image_galata/rowdies.jpg" alt="rowdies" width="200" height="150">
+                        </div>
 
-    </div>
+                        <div class="item">
+                            <img src="image_galata/sparklers.jpg" alt="sparklers" width="200" height="150">
+                        </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <div>Welcome to Galata 2.0 Mobile App. Please click on buttons to get house details.</div>
-  <h2>Royal Rowdies</h2>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#rowdies">Rowdies</button>
-  <div id="rowdies" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-  <h2>Purple Sparklers</h2>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#sparklers">Sparklers</button>
-  <div id="sparklers" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-  <h2>Black Panthers</h2>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#panthers">panthers</button>
-  <div id="panthers" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-  <h2>Rising Phoenix</h2>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#phoenix">Phoenix</button>
-  <div id="phoenix" class="collapse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </div>
-</div>
+                        <div class="item">
+                            <img src="image_galata/panthers.jpg" alt="panthers" width="200" height="150">
+                        </div>
+
+                        <div class="item">
+                            <img src="image_galata/phoenix.jpg" alt="phoenix" width="200" height="150">
+                        </div>
 
 
+                    </div>
 
-            
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <div>Welcome to Galaata Mobile App. Please click on buttons to get house details.</div>
+                <h2>Royal Rowdies</h2>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#rowdies">Rowdies</button>
+                <div id="rowdies" class="collapse">
+                    Rowdies is mixture of the bundles ( OB01, OB20, Pega team & Security crew)
+                    <br/> Wherever they go, they own that place. Every event in Galaata is incomplete without entertainment and Rowdies own this entertainment completely.
+                    <br/> For others, entertainment comes to them sometimes like a surprise, But it is always with us like a friend.In short:
+                    <br/> Galaata = Entertainment and Entertainment = Rowdies.
+                    <br/> i.e A=B and B=C , you know the rest...
+                    <br/>
+                    <br/>
+                    <b>House owner:</b> Pratyush Kumar ( AKA – The Don)
+                    <br/>
+                    <b>House co-owner:</b> Sandeep Anand ( AKA - Sandy)
+                    <br/>
+                    <b>Captain:</b> Ankan (AKA the Chanakya) And Rajesh (AKA – Raju bhai)
+                    <br/>
+                </div>
+                <h2>Purple Sparklers</h2>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#sparklers">Sparklers</button>
+                <div id="sparklers" class="collapse">
+                    Purple(Combination of Blue and Red) Sparklers is the sparkling house of the peace makers depicting the calm stability of blue to make a mark in silence with the fierce energy of red to stand out in the crowd.They practice healthy habits and encourage everyone to move one step towards the initiatives like Cleanliness, Ergonomics, Security Compliance and Waste Recycling. This team comprises of OB03, OB18 & OB08.
+                    <br/>
+                    <br/>
+                    <b>House owner:</b> Naveen M Reddy
+                    <br/>
+                    <b>House co-owner:</b> Anil Karnani
+                    <br/>
+                    <b>Captain:</b> Anitha Kote
+                    <br/>
+                </div>
+                <h2>Black Panthers</h2>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#panthers">Panthers</button>
+                <div id="panthers" class="collapse">
+                    <b>Tag line:</b> Bold, Black Beast , we don’t care about any hunters, coz we hunt them and Feast.
+                    <br/>
+                    <br/>
+                    <b>House owner:</b> Priyesh Agrawal
+                    <br/>
+                    <b>House co-owner:</b> Venkat Sangireddy
+                    <br/>
+                    <b>Captain:</b> Pratik and Shailaja
+                    <br/>
+                </div>
+                <h2>Rising Phoenix</h2>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#phoenix">Phoenix</button>
+                <div id="phoenix" class="collapse">
+                    Rising Phoenix team comprises of major Operations teams on the Floor. AWM Operations, Digital Operations, Asset Management Operations, Corporate and Compliance Operations, Information Security team, Hosting Services, Cirtix and Capacity teams etc. Few other support teams such as IDM and Pantry crew are also part of this Team.
+                    <br/>
+                    <br/>
+                    <b>House owner:</b> Ganesh Y
+                    <br/>
+                    <b>House co-owner:</b> Satish Bommisetty
+                    <br/>
+                    <b>Captain:</b> Ashwini Amin
+                    <br/>
+                </div>
+            </div>
+
+
+
+
             <!--    <p class="text-info">Information</p> -->
-            
-<!--
+
+            <!--
             <div class="container">
                 <br>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -361,68 +392,149 @@
             <!--            <p class="text-info">Information</p> -->
         </div>
         <div id="discussion-container">
-            <h4 class="text-center">DISCUSSION</h4>
+            <h4 class="text-center">GALLERY</h4>
             <hr>
 
-            <div id="discussion-dynamic-data">
+
+            <!-- 
+-->
+            <div id="myCarouselGallery" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarouselGallery" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="1"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="2"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="3"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="4"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="5"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="6"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="7"></li>
+                    <li data-target="#myCarouselGallery" data-slide-to="8"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+
+                    <div class="item active">
+                        <img src="image2/galata_home.jpg" alt="galaata" width="200" height="150">
+                    </div>
+
+                    <div class="item">
+                        <img src="image2/sarbani.jpg" alt="sarbani" width="200" height="150">
+                    </div>
+
+                    <div class="item">
+                        <img src="image_galata/vini.jpg" alt="vini" width="200" height="150">
+                    </div>
+
+                    <div class="item">
+                        <img src="image2/carrom.jpg" alt="carrom" width="200" height="150">
+                    </div>
+
+                    <div class="item">
+                        <img src="image2/bp.jpg" alt="Panthers" width="200" height="150">
+                    </div>
+                    <div class="item">
+                        <img src="image2/rr.jpg" alt="Rowdies" width="200" height="150">
+                    </div>
+                    <div class="item">
+                        <img src="image2/ps.jpg" alt="Sparklers" width="200" height="150">
+                    </div>
+                    <div class="item">
+                        <img src="image2/rp.jpg" alt="Phoenix" width="200" height="150">
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarouselGallery" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarouselGallery" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-
-
+            <br/>
+            <div class="alert alert-info">
+                Thanks All, for making this event a big Success..!!
+                <br/>
+                <br/> Stay Connected, more images will be coming soon....
+            </div>
         </div>
-        <div id="coordinators-container">
-            <h4 class="text-center">COORDINATORS</h4>
 
-            <hr>
-            <table class="table table-bordered g-tab">
-                <thead>
 
-                    <tr>
-                        <!--                                <th><span class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon glyphicon-arrow-right"></span></th> -->
-                        <th>EVENT</th>
-                        <th>COORDINATORS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Badminton</th>
-                        <td>Sujatha & Naveen</td>
 
-                    </tr>
-                    <tr>
-                        <th>Cricket</th>
+        <!--
 
-                        <td>Sandeep & Arunima </td>
-                    </tr>
-                    <tr>
-                        <th>Chess</th>
-                        <td>Alok & Purva</td>
+-->
 
-                    </tr>
-                    <tr>
-                        <th>Carrom</th>
-                        <td>Sidhant & Piyush</td>
 
-                    </tr>
-                    <tr>
-                        <th>Dumb Charades</th>
-                        <td>Jyoti &  Santosh</td>
 
-                    </tr>
-                    <tr>
-                        <th>Quiz</th>
-                        <td>KG Anand</td>
 
-                    </tr>
 
-                    <tr>
-                        <th>Core committee</th>
-                        <td>Sarbani , Vini and Manas</td>
+        <!--  <div id="discussion-dynamic-data"> -->
+    </div>
 
-                    </tr>
 
-                </tbody>
-            </table>
+    </div>
+    <div id="coordinators-container">
+        <h4 class="text-center">COORDINATORS</h4>
+
+        <hr>
+        <div class="container">
+        <table class="table table-bordered g-tab">
+            <thead>
+
+                <tr>
+                    <!--                                <th><span class="glyphicon glyphicon-arrow-down"></span><span class="glyphicon glyphicon-arrow-right"></span></th> -->
+                    <th>EVENT</th>
+                    <th>COORDINATORS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Badminton</th>
+                    <td>Sujatha & Naveen</td>
+
+                </tr>
+                <tr>
+                    <th>Cricket</th>
+
+                    <td>Sandeep & Arunima </td>
+                </tr>
+                <tr>
+                    <th>Chess</th>
+                    <td>Alok & Purva</td>
+
+                </tr>
+                <tr>
+                    <th>Carrom</th>
+                    <td>Sidhant & Piyush</td>
+
+                </tr>
+                <tr>
+                    <th>Dumb Charades</th>
+                    <td>Jyoti & Santosh</td>
+
+                </tr>
+                <tr>
+                    <th>Quiz</th>
+                    <td>KG Anand</td>
+
+                </tr>
+
+                <tr>
+                    <th>Core committee</th>
+                    <td>Sarbani , Vini and Manas</td>
+
+                </tr>
+
+            </tbody>
+        </table>
         </div>
+    </div>
     </div>
 
     <div id="event-container">
@@ -430,103 +542,119 @@
             <div id="badminton-container">
                 <h4 class="text-center">Badminton</h4>
                 <hr>
-                <center>Final Round</center>
-                <p class="alert alert-info"><br> Winner: Purple Sparklers
-                <br> Player: Sujata, Rashmi
-                <br> Winners : Royal Rawdies
-                <br/> Player: Rajesh, Gautam
-                <br/>
+                <center>Final Round (Women)</center>
+                <p class="alert alert-info">
+                    <br><b>Winners: Purple Sparklers</b>
+                    <br>Players: Sujatha and Purva
+                    <br><b>Runners Up: Royal Rowdies</b>
+                    <br/>Players: Disha S and Vijaya
+                    <br/>
                 </p>
-                <div id="badminton-dynamic-data">
-                </div>
+                <br/>
+                <center>Final Round (Men)</center>
+                <p class="alert alert-info">
+                    <br><b>Winners: Royal Rowdies</b>
+                    <br>Players: Rajesh and Anudeep
+                    <br><b>Runners Up: Royal Rowdies</b>
+                    <br/>Players: Rajendra and Gautam
+                    <br/>
+                </p>
+                <!--   <div id="badminton-dynamic-data"> -->
             </div>
+
             <div id="chess-container">
                 <h4 class="text-center">Chess</h4>
                 <hr>
-
                 <center>Final Round</center>
-                
                 <br>
-                <p class="alert alert-info">
-                    Winner: Black Pantheres
-                <br> Player: Srinivas
-                <br> Runners Up: Black Pantheres
-                <br/> Player: Shailaja
-                <br/>
+                <p class="alert alert-info"><b>Winner: Black Panthers</b>
+                    <br>Player: Srinivas Dasari
+                    <br><b>Runner Up: Black Panthers</b>
+                    <br/>Player: Sailaja Sarbada
+                    <br/>
                 </p>
 
-                <div id="chess-dynamic-data">
-                </div>
+                <!--    <div id="chess-dynamic-data"> -->
             </div>
+
 
             <div id="carrom-container">
                 <h4 class="text-center">Carrom</h4>
                 <hr>
-
-
                 <center>Final Round</center>
-                
-                <br> <p class="alert alert-info">Winner: Purple Sparklers
-                <br> Player: Arun, Rajesh 
-                <br> Runenrs Up: Royal Rawdies
-                <br/> Player: Gautam, Nidya
-                <br/></p>
-                <div id="carrom-dynamic-data">
-                </div>
+                <br>
+                <p class="alert alert-info"><b>Winner: Purple Sparklers</b>
+                    <br>Players: Arun and Rajesh
+                    <br><b>Runners Up: Royal Rowdies</b>
+                    <br/>Players: Rajendra and Nidya
+                    <br/>
+                </p>
+                <!--     <div id="carrom-dynamic-data"> -->
             </div>
+
 
             <div id="cricket-container">
-                <h4 class="text-center">Cricket</h4>
+                <h4 class="text-center">Minute to win it</h4>
                 <hr>
                 <center>Final Round</center>
-                <br><p class="alert alert-info"> Winner: Ameriprise Super Kings
-                <br> Runners Up: Bulldozers
+                <br>
+
+
+
+                <p class="alert alert-info"><b>Winner: Black Panthers</b>
+                    <br>Players: Lipsa , Sudhanshu and Deepashree
+                    <br><b>Runners Up: Rising Pheonix</b>
+                    <br/>Players: Vishesh, Prarthana, Chandrakala
+                </p>
                 <br/>
-</p>
-                <div id="cricket-dynamic-data">
-                </div>
+                <!--     <div id="cricket-dynamic-data"> -->
             </div>
+
 
             <div id="quiz-container">
                 <h4 class="text-center">Quiz</h4>
                 <hr>
                 <center>Final Round</center>
-                <br> <p class="alert alert-info">Winner: Royal Rawdies
-                <br> Player: Ankan, Player2, Player3
-                <br> Runners Up: Purple Sparklers
-                <br/> Player: Promod, Swetha, Arvind
-</p>
+                <br>
+                <p class="alert alert-info"><b>Winner: Rising Phoenix</b>
+                    <br>Players: Faizul, Ashwini and Sourav
+                    <br><b>Runners Up: Royal Rowdies</b>
+                    <br/>Players: Ankan, Srini and Sandeep
+                </p>
                 <br/>
 
-                <div id="quiz-dynamic-data">
-                </div>
+                <!--                <div id="quiz-dynamic-data">  -->
             </div>
+
 
             <div id="dumb-container">
                 <h4 class="text-center">Dumb Charades</h4>
                 <hr>
-                <center>Final Round</center>
-                <br> <p class="alert alert-info">Winner: Royal Rawdies
-                <br> Player: Anudeep, Rajesh
-                <br> Runners Up: Royal Rawdies
-                <br/> Player: Gautam, Rajendra
+                <center>Final Round is on 7th August!</center>
+                <br>
+                <p class="alert alert-info"><b>Finalist# 1: Black Panthers</b>
+                    <br>Players: Vishesh,Pranay and Prartana
+                    <br><b>Finalist# 2: Rising Phoenix</b>
+                    <br/>Players: Faizul, Praveen V and Ganesh Y
                 </p>
                 <br/>
 
-                <div id="dumb-dynamic-data">
-                </div>
+                <!--     <div id="dumb-dynamic-data"> -->
             </div>
+        </div>
+        <div id="ajax-loader">
+            <image src="image_galata/ajax_loader.gif" />
+        </div>
 
-            <div id="ajax-loader">
-                <image src="image_galata/ajax_loader.gif" />
-            </div>
-
-
+        <!--
             <div id="home-link">
                 <br>
                 <a href="index.html"><span class="glyphicon glyphicon-home" ></span></a>
             </div>
-        </div>
+-->
+
+    </div>
+    </div>
     </div>
     </div>
 </body>

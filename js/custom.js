@@ -130,3 +130,9 @@
             console.log("done");
         }
 
+        function blinker() {
+    $('.blink_me').fadeOut(500);
+    $('.blink_me').fadeIn(800);
+}
+
+setInterval(blinker, 1500);
